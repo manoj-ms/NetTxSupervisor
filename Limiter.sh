@@ -2,9 +2,10 @@
 
 TC=/usr/sbin/tc
 IF=eth0
-LIMIT=100mbit
+LIMIT=HARD_LIMIT_Bandwidth
+#Ex.: LIMIT=100mbit
 
-DST_CIDR=192.168.30.0/28
+DST_CIDR=VALID_IP_ADDR
 #Ex: DST_CIDR=192.168.30.0/28
 
 U32="$TC filter add dev $IF protocol ip parent 1:0 prio 1 u32"
